@@ -1,0 +1,43 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="WgdZ0QspROrLHrJVtIzY">
+    <mxGraphModel dx="585" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="180" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="210" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Camera" vertex="1">
+          <mxGeometry height="60" width="120" x="190" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-6" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="200" width="200" x="150" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-7" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="170" width="170" x="165" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="310" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-10" parent="1" style="text;whiteSpace=wrap;html=1;" value="Embedded Computer   │&#xa;                    │                       │&#xa;                    │ • Lane detection      │&#xa;                    │ • Lane position       │&#xa;                    │ • ADAS decisions      │&#xa;                    │ • Data logging" vertex="1">
+          <mxGeometry height="110" width="160" x="180" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-13" parent="1" style="text;whiteSpace=wrap;html=1;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ESP32&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;                    │ • Steering control    │&lt;br&gt;                    │ • Throttle control    │&lt;br&gt;                    │ • Safety limits       │&lt;br&gt;                    │ • Communication       │&lt;br&gt;                    │ • Emergency stop&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="160" x="190" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-14" parent="1" style="text;whiteSpace=wrap;html=1;" value="ESC" vertex="1">
+          <mxGeometry height="40" width="60" x="350" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="qQRlt738aVyZkZ8tvqNn-15" parent="1" style="text;whiteSpace=wrap;html=1;" value="Steering&amp;nbsp;&lt;br&gt;&amp;nbsp;Servo" vertex="1">
+          <mxGeometry height="50" width="60" x="90" y="935" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

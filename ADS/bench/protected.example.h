@@ -1,0 +1,10 @@
+#ifndef ADS_PROTECTED_EXAMPLE_H
+#define ADS_PROTECTED_EXAMPLE_H
+/* Default CubeIDE profile. No physical acceptance or output enable inferred. */
+#define ADS_MOTOR_OPERATING_MODE 1
+#define ADS_PHYSICAL_OUTPUT_ENABLED 0
+#define ADS_CIRCUIT_OUTPUT_ENABLED 0
+#define ADS_CIRCUIT_RELAY_VERIFIED 1
+#define ADS_SUPERVISED_TESTING_APPROVED 0
+#define ADS_PROTECTION_LIMITS_VERIFIED 0
+#endif
