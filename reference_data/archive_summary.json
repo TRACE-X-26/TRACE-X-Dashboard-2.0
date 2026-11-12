@@ -1,0 +1,99 @@
+{
+  "csv_files": 134,
+  "unique_runs": 74,
+  "duplicate_files": 60,
+  "rejected_files": 0,
+  "tests": {
+    "1": {
+      "name": "Safe Idle",
+      "planned_pwm_percent": 0,
+      "independent_capture_files": 1,
+      "files_with_measurements": 0,
+      "approved_baseline_runs": 0
+    },
+    "2": {
+      "name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "independent_capture_files": 17,
+      "files_with_measurements": 3,
+      "approved_baseline_runs": 0
+    },
+    "3": {
+      "name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "independent_capture_files": 13,
+      "files_with_measurements": 13,
+      "approved_baseline_runs": 0
+    },
+    "4": {
+      "name": "50% PWM",
+      "planned_pwm_percent": 50,
+      "independent_capture_files": 6,
+      "files_with_measurements": 6,
+      "approved_baseline_runs": 0
+    },
+    "5": {
+      "name": "75% PWM",
+      "planned_pwm_percent": 75,
+      "independent_capture_files": 2,
+      "files_with_measurements": 2,
+      "approved_baseline_runs": 0
+    },
+    "6": {
+      "name": "100% PWM",
+      "planned_pwm_percent": 100,
+      "independent_capture_files": 3,
+      "files_with_measurements": 3,
+      "approved_baseline_runs": 0
+    },
+    "7": {
+      "name": "Minimum Starting PWM",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 6,
+      "files_with_measurements": 6,
+      "approved_baseline_runs": 0
+    },
+    "8": {
+      "name": "Steady-State RPM",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 4,
+      "files_with_measurements": 4,
+      "approved_baseline_runs": 0
+    },
+    "9": {
+      "name": "Voltage Stability",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 2,
+      "files_with_measurements": 2,
+      "approved_baseline_runs": 0
+    },
+    "10": {
+      "name": "Startup Current",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 2,
+      "files_with_measurements": 2,
+      "approved_baseline_runs": 0
+    },
+    "11": {
+      "name": "Power Consumption",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 1,
+      "files_with_measurements": 1,
+      "approved_baseline_runs": 0
+    },
+    "12": {
+      "name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 8,
+      "files_with_measurements": 8,
+      "approved_baseline_runs": 0
+    },
+    "13": {
+      "name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 9,
+      "files_with_measurements": 9,
+      "approved_baseline_runs": 0
+    }
+  }
+}

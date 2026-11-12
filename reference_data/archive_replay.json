@@ -1,0 +1,3544 @@
+{
+  "test_catalog": {
+    "1": {
+      "name": "Safe Idle",
+      "planned_pwm_percent": 0,
+      "independent_capture_files": 1,
+      "files_with_measurements": 0,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "2": {
+      "name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "independent_capture_files": 17,
+      "files_with_measurements": 3,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "3": {
+      "name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "independent_capture_files": 13,
+      "files_with_measurements": 13,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "4": {
+      "name": "50% PWM",
+      "planned_pwm_percent": 50,
+      "independent_capture_files": 6,
+      "files_with_measurements": 6,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "5": {
+      "name": "75% PWM",
+      "planned_pwm_percent": 75,
+      "independent_capture_files": 2,
+      "files_with_measurements": 2,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "6": {
+      "name": "100% PWM",
+      "planned_pwm_percent": 100,
+      "independent_capture_files": 3,
+      "files_with_measurements": 3,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "7": {
+      "name": "Minimum Starting PWM",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 6,
+      "files_with_measurements": 6,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "8": {
+      "name": "Steady-State RPM",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 4,
+      "files_with_measurements": 4,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "9": {
+      "name": "Voltage Stability",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 2,
+      "files_with_measurements": 2,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "10": {
+      "name": "Startup Current",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 2,
+      "files_with_measurements": 2,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "11": {
+      "name": "Power Consumption",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 1,
+      "files_with_measurements": 1,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "12": {
+      "name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 8,
+      "files_with_measurements": 8,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    },
+    "13": {
+      "name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "independent_capture_files": 9,
+      "files_with_measurements": 9,
+      "approved_baseline_runs": 0,
+      "present_in_archive": true
+    }
+  },
+  "runs": {
+    "data/motor_tests/test_12/test_12_measurements_20261028_163600_487737_85g.csv [7be20ac27211]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 12,
+      "test_name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.276,
+          "min": 12.24,
+          "max": 12.292,
+          "samples": 41
+        },
+        "motor_current_A": {
+          "median": 0.095,
+          "min": 0.037,
+          "max": 0.199,
+          "samples": 41
+        },
+        "motor_rpm": {
+          "median": 75.0,
+          "min": 0.0,
+          "max": 77.0,
+          "samples": 42
+        },
+        "motor_power_W": {
+          "median": 1.166,
+          "min": 0.452,
+          "max": 2.443,
+          "samples": 41
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 12,
+        "temperature_sensor_error": 41,
+        "voltage_receive_intervals_under_50ms": 11,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 12
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_12/test_12_measurements_20261028_163600_487737_85g.csv"
+      ]
+    },
+    "data/motor_tests/test_12/test_12_measurements_20261028_162324_659100_141p5gg.csv [d1db36195098]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 12,
+      "test_name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.27,
+          "min": 12.188,
+          "max": 12.284,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.1295,
+          "min": 0.043,
+          "max": 0.327,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 76.0,
+          "min": 75.0,
+          "max": 77.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 1.5895000000000001,
+          "min": 0.526,
+          "max": 3.985,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 43,
+        "no_encoder_pulses_reported": 11,
+        "voltage_receive_intervals_under_50ms": 11,
+        "MOTOR_START": 1,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "before_start": 11
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_12/test_12_measurements_20261028_162324_659100_141p5gg.csv"
+      ]
+    },
+    "data/motor_tests/test_12/test_12_measurements_20261026_163708_038678.csv [6e307bc65645]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 12,
+      "test_name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.264,
+          "min": 12.18,
+          "max": 12.284,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.111,
+          "min": 0.041,
+          "max": 0.376,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 76.0,
+          "max": 79.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.3615,
+          "min": 0.502,
+          "max": 4.579,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 52,
+        "no_encoder_pulses_reported": 19,
+        "voltage_receive_intervals_under_50ms": 9,
+        "MOTOR_START": 1,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "before_start": 10,
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_12/test_12_measurements_20261026_163708_038678.csv"
+      ]
+    },
+    "data/motor_tests/test_12/test_12_measurements_20261028_163421_737423_113p4g.csv [2879487ff65d]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 12,
+      "test_name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.268,
+          "min": 0.012,
+          "max": 12.288,
+          "samples": 42
+        },
+        "motor_current_A": {
+          "median": 0.075,
+          "min": 0.0,
+          "max": 0.166,
+          "samples": 42
+        },
+        "motor_rpm": {
+          "median": 72.0,
+          "min": 0.0,
+          "max": 77.0,
+          "samples": 41
+        },
+        "motor_power_W": {
+          "median": 0.9195,
+          "min": 0.0,
+          "max": 2.038,
+          "samples": 42
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 13,
+        "temperature_sensor_error": 43,
+        "voltage_receive_intervals_under_50ms": 11,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 13
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_12/test_12_measurements_20261028_163421_737423_113p4g.csv"
+      ]
+    },
+    "data/motor_tests/test_12/test_12_measurements_20261028_161107_565120.csv [c8adedf17907]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 12,
+      "test_name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.244,
+          "min": 12.176,
+          "max": 12.272,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.088,
+          "min": 0.049,
+          "max": 0.303,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 76.0,
+          "max": 79.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 1.076,
+          "min": 0.598,
+          "max": 3.689,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 6,
+        "temperature_sensor_error": 37,
+        "voltage_receive_intervals_under_50ms": 5,
+        "MOTOR_START": 1,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "before_start": 6
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_12/test_12_measurements_20261028_161107_565120.csv"
+      ]
+    },
+    "data/motor_tests/test_12/test_12_measurements_20261028_163730_204912_56p7g.csv [54a991b1ee07]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 12,
+      "test_name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.264,
+          "min": 12.196,
+          "max": 12.288,
+          "samples": 36
+        },
+        "motor_current_A": {
+          "median": 0.056,
+          "min": 0.0,
+          "max": 0.311,
+          "samples": 36
+        },
+        "motor_rpm": {
+          "median": 75.0,
+          "min": 0.0,
+          "max": 76.0,
+          "samples": 36
+        },
+        "motor_power_W": {
+          "median": 0.687,
+          "min": 0.0,
+          "max": 3.792,
+          "samples": 36
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 6,
+        "temperature_sensor_error": 38,
+        "voltage_receive_intervals_under_50ms": 6,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 6
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_12/test_12_measurements_20261028_163730_204912_56p7g.csv"
+      ]
+    },
+    "data/motor_tests/test_12/test_12_measurements_20261028_162016_619973_56g.csv [88fa95bc0cfb]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 12,
+      "test_name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.268,
+          "min": 12.176,
+          "max": 12.284,
+          "samples": 43
+        },
+        "motor_current_A": {
+          "median": 0.091,
+          "min": 0.054,
+          "max": 0.32,
+          "samples": 43
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 0.0,
+          "max": 78.0,
+          "samples": 41
+        },
+        "motor_power_W": {
+          "median": 1.115,
+          "min": 0.662,
+          "max": 3.896,
+          "samples": 43
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 43,
+        "voltage_receive_intervals_under_50ms": 12,
+        "no_encoder_pulses_reported": 11,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 11
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_12/test_12_measurements_20261028_162016_619973_56g.csv"
+      ]
+    },
+    "data/motor_tests/test_12/test_12_measurements_20261028_162817_170489_170g.csv [08ce009ac882]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 12,
+      "test_name": "Weight / Load Testing",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.252,
+          "min": 12.184,
+          "max": 12.284,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.1275,
+          "min": 0.068,
+          "max": 0.354,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 63.0,
+          "min": 57.0,
+          "max": 71.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.54,
+          "min": 0.823,
+          "max": 4.313,
+          "samples": 31
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 44,
+        "voltage_receive_intervals_under_50ms": 12,
+        "no_encoder_pulses_reported": 10,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 11
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_12/test_12_measurements_20261028_162817_170489_170g.csv"
+      ]
+    },
+    "data/motor_tests/test_06/test_06_measurements_20261026_154242_843632.csv [41e50948fe0c]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 6,
+      "test_name": "100% PWM",
+      "planned_pwm_percent": 100,
+      "target_pwm_percent": [
+        100.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.236,
+          "min": 11.976,
+          "max": 12.26,
+          "samples": 37
+        },
+        "motor_current_A": {
+          "median": 0.125,
+          "min": 0.06,
+          "max": 1.084,
+          "samples": 38
+        },
+        "motor_rpm": {
+          "median": 160.0,
+          "min": 0.0,
+          "max": 162.0,
+          "samples": 36
+        },
+        "motor_power_W": {
+          "median": 1.529,
+          "min": 0.735,
+          "max": 12.981,
+          "samples": 38
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 38,
+        "no_encoder_pulses_reported": 5,
+        "voltage_receive_intervals_under_50ms": 5,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 5
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_06/test_06_measurements_20261026_154242_843632.csv"
+      ]
+    },
+    "data/motor_tests/test_06/test_06_measurements_20261026_154414_035407.csv [fd130a31bfba]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 6,
+      "test_name": "100% PWM",
+      "planned_pwm_percent": 100,
+      "target_pwm_percent": [
+        100.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.244,
+          "min": 11.964,
+          "max": 12.26,
+          "samples": 41
+        },
+        "motor_current_A": {
+          "median": 0.135,
+          "min": 0.055,
+          "max": 1.133,
+          "samples": 41
+        },
+        "motor_rpm": {
+          "median": 160.0,
+          "min": 0.0,
+          "max": 162.0,
+          "samples": 40
+        },
+        "motor_power_W": {
+          "median": 1.651,
+          "min": 0.674,
+          "max": 13.555,
+          "samples": 41
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 10,
+        "temperature_sensor_error": 42,
+        "voltage_receive_intervals_under_50ms": 9,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 10
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_06/test_06_measurements_20261026_154414_035407.csv"
+      ]
+    },
+    "data/motor_tests/test_06/test_06_measurements_20261026_154205_877250.csv [e0424f4203db]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 6,
+      "test_name": "100% PWM",
+      "planned_pwm_percent": 100,
+      "target_pwm_percent": [
+        100.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.24,
+          "min": 11.968,
+          "max": 12.252,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.134,
+          "min": 0.107,
+          "max": 1.125,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 160.0,
+          "min": 155.0,
+          "max": 160.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 1.6395,
+          "min": 1.309,
+          "max": 13.464,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 31,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_06/test_06_measurements_20261026_154205_877250.csv"
+      ]
+    },
+    "data/motor_tests/test_13/test_13_measurements_20261028_164206_518523.csv [c7d707c88753]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 13,
+      "test_name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.152,
+          "min": 12.152,
+          "max": 12.152,
+          "samples": 1
+        },
+        "motor_current_A": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 2
+        },
+        "motor_rpm": {
+          "median": 50.5,
+          "min": 49.0,
+          "max": 52.0,
+          "samples": 2
+        },
+        "motor_power_W": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 2
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 42,
+        "MOTOR_STOP": 2,
+        "voltage_receive_intervals_under_50ms": 11,
+        "no_encoder_pulses_reported": 14
+      },
+      "zero_rpm_samples_by_phase": {
+        "stopped": 15
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_13/test_13_measurements_20261028_164206_518523.csv"
+      ]
+    },
+    "data/motor_tests/test_13/test_13_measurements_20261028_163933_979868.csv [88039233212c]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 13,
+      "test_name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.272,
+          "min": 12.212,
+          "max": 12.288,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 74.0,
+          "min": 71.0,
+          "max": 75.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 21,
+        "temperature_sensor_error": 53,
+        "voltage_receive_intervals_under_50ms": 11,
+        "MOTOR_START": 1,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "before_start": 12,
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_13/test_13_measurements_20261028_163933_979868.csv"
+      ]
+    },
+    "data/motor_tests/test_13/test_13_measurements_20261028_164438_039651.csv [9499576e0210]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 13,
+      "test_name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.176,
+          "min": 12.064,
+          "max": 12.284,
+          "samples": 38
+        },
+        "motor_current_A": {
+          "median": 0.0195,
+          "min": 0.002,
+          "max": 0.489,
+          "samples": 38
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": -1.0,
+          "max": 7.0,
+          "samples": 37
+        },
+        "motor_power_W": {
+          "median": 0.239,
+          "min": 0.024,
+          "max": 5.977,
+          "samples": 38
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 11,
+        "temperature_sensor_error": 40,
+        "voltage_receive_intervals_under_50ms": 7,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 15
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_13/test_13_measurements_20261028_164438_039651.csv"
+      ]
+    },
+    "data/motor_tests/test_13/test_13_measurements_20261028_160624_479444.csv [6b55d6c60385]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 13,
+      "test_name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.22,
+          "min": 12.144,
+          "max": 12.244,
+          "samples": 28
+        },
+        "motor_current_A": {
+          "median": 0.0895,
+          "min": 0.036,
+          "max": 0.309,
+          "samples": 28
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 75.0,
+          "max": 79.0,
+          "samples": 27
+        },
+        "motor_power_W": {
+          "median": 1.0935000000000001,
+          "min": 0.439,
+          "max": 3.752,
+          "samples": 28
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 9,
+        "temperature_sensor_error": 38,
+        "voltage_receive_intervals_under_50ms": 5,
+        "MOTOR_START": 1,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "before_start": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_13/test_13_measurements_20261028_160624_479444.csv"
+      ]
+    },
+    "data/motor_tests/test_13/test_13_measurements_20261028_164030_286870.csv [dcadd948551f]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 13,
+      "test_name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.22,
+          "min": 12.188,
+          "max": 12.264,
+          "samples": 28
+        },
+        "motor_current_A": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 28
+        },
+        "motor_rpm": {
+          "median": 56.0,
+          "min": 45.0,
+          "max": 63.0,
+          "samples": 27
+        },
+        "motor_power_W": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 28
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 10,
+        "temperature_sensor_error": 39,
+        "voltage_receive_intervals_under_50ms": 7,
+        "MOTOR_START": 1,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "before_start": 10
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_13/test_13_measurements_20261028_164030_286870.csv"
+      ]
+    },
+    "data/motor_tests/test_13/test_13_measurements_20261028_154805_625225.csv [5a26a2d5d22e]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 13,
+      "test_name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.216,
+          "min": 12.164,
+          "max": 12.236,
+          "samples": 29
+        },
+        "motor_current_A": {
+          "median": 0.129,
+          "min": 0.058,
+          "max": 0.203,
+          "samples": 29
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 74.0,
+          "max": 79.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.576,
+          "min": 0.707,
+          "max": 2.483,
+          "samples": 29
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 30,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_13/test_13_measurements_20261028_154805_625225.csv"
+      ]
+    },
+    "data/motor_tests/test_13/test_13_measurements_20261028_164250_352208.csv [3b2700911b23]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 13,
+      "test_name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.225999999999999,
+          "min": 12.176,
+          "max": 12.272,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.0635,
+          "min": 0.024,
+          "max": 0.113,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 59.0,
+          "min": 44.0,
+          "max": 70.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 0.7785,
+          "min": 0.293,
+          "max": 1.385,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 7,
+        "temperature_sensor_error": 38,
+        "voltage_receive_intervals_under_50ms": 6,
+        "MOTOR_START": 1,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "before_start": 7
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_13/test_13_measurements_20261028_164250_352208.csv"
+      ]
+    },
+    "data/motor_tests/test_13/test_13_measurements_20261028_164341_236201.csv [bb2e4df0ad00]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 13,
+      "test_name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.242,
+          "min": 12.144,
+          "max": 12.28,
+          "samples": 42
+        },
+        "motor_current_A": {
+          "median": 0.067,
+          "min": 0.019,
+          "max": 0.156,
+          "samples": 43
+        },
+        "motor_rpm": {
+          "median": 34.0,
+          "min": 0.0,
+          "max": 72.0,
+          "samples": 42
+        },
+        "motor_power_W": {
+          "median": 0.816,
+          "min": 0.233,
+          "max": 1.911,
+          "samples": 43
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 44,
+        "no_encoder_pulses_reported": 11,
+        "voltage_receive_intervals_under_50ms": 11,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 11
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_13/test_13_measurements_20261028_164341_236201.csv"
+      ]
+    },
+    "data/motor_tests/test_13/test_13_measurements_20261028_160710_858136.csv [17fe1794475e]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 13,
+      "test_name": "Excessive Friction",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.225999999999999,
+          "min": 12.208,
+          "max": 12.244,
+          "samples": 2
+        },
+        "motor_current_A": {
+          "median": 0.13,
+          "min": 0.124,
+          "max": 0.136,
+          "samples": 2
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 78.0,
+          "max": 78.0,
+          "samples": 2
+        },
+        "motor_power_W": {
+          "median": 1.589,
+          "min": 1.513,
+          "max": 1.665,
+          "samples": 2
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 41,
+        "voltage_receive_intervals_under_50ms": 11,
+        "MOTOR_STOP": 2,
+        "no_encoder_pulses_reported": 8
+      },
+      "zero_rpm_samples_by_phase": {
+        "stopped": 8
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_13/test_13_measurements_20261028_160710_858136.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_measurements_20261021_161830_041234.csv [21fa3000add6]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_measurements_20261021_161830_041234.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_repeat_20261021_151240.csv [5821e8aad0b8]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {
+        "ina219_not_detected": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_repeat_20261021_151240.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_measurements_20261021_162622_389954.csv [4b72cc96bb4d]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_measurements_20261021_162622_389954.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_measurements_20261021_161935_897207.csv [278da22dd157]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_measurements_20261021_161935_897207.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_10percent_20261021_152217.csv [aa021ab9fc80]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_10percent_20261021_152217.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_20261021_145244.csv [9abf12f946fa]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {
+        "ina219_not_detected": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_20261021_145244.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_10percent_20261021_160826.csv [e7f45027c0c4]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_10percent_20261021_160826.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_repeat_20261021_151133.csv [5f2faa078203]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {
+        "ina219_not_detected": 6
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_repeat_20261021_151133.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_repeat_20261021_151524.csv [6d3afaa14c53]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_repeat_20261021_151524.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_10percent_20261021_152032.csv [f6528e3cd48c]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_10percent_20261021_152032.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_repeat_20261021_151339.csv [036c88dd5536]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_repeat_20261021_151339.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_10percent_20261021_152841.csv [274e42b8ef57]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_10percent_20261021_152841.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_20261021_144839.csv [3b642033123c]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_20261021_144839.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_measurements_20261023_103656_371642.csv [5c6c30d8715a]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.316,
+          "min": 12.3,
+          "max": 12.324,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.0675,
+          "min": 0.048,
+          "max": 0.089,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 0.831,
+          "min": 0.59,
+          "max": 1.096,
+          "samples": 30
+        }
+      },
+      "events": {
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_measurements_20261023_103656_371642.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_measurements_20261023_111658_709043.csv [0916c4b00790]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.3,
+          "min": 12.276,
+          "max": 12.308,
+          "samples": 31
+        },
+        "motor_current_A": {
+          "median": 0.069,
+          "min": 0.049,
+          "max": 0.085,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": -149.0,
+          "min": -150.0,
+          "max": 0.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 0.848,
+          "min": 0.602,
+          "max": 1.045,
+          "samples": 31
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 1,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 1
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_measurements_20261023_111658_709043.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_measurements_20261023_112328_297686.csv [d8d3d4761bfb]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.312,
+          "min": 12.3,
+          "max": 12.32,
+          "samples": 43
+        },
+        "motor_current_A": {
+          "median": 0.067,
+          "min": 0.051,
+          "max": 0.084,
+          "samples": 43
+        },
+        "motor_rpm": {
+          "median": 149.0,
+          "min": -149.0,
+          "max": 207.0,
+          "samples": 43
+        },
+        "motor_power_W": {
+          "median": 0.824,
+          "min": 0.627,
+          "max": 1.034,
+          "samples": 43
+        }
+      },
+      "events": {
+        "voltage_receive_intervals_under_50ms": 11,
+        "no_encoder_pulses_reported": 12,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 14
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_measurements_20261023_112328_297686.csv"
+      ]
+    },
+    "data/motor_tests/test_02/test_02_20261021_145331.csv [b920a8a1d530]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 2,
+      "test_name": "10% PWM",
+      "planned_pwm_percent": 10,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {},
+      "events": {
+        "ina219_not_detected": 11
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_02/test_02_20261021_145331.csv"
+      ]
+    },
+    "data/motor_tests/test_10/test_10_measurements_20261026_163131_900981.csv [08790e781865]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 10,
+      "test_name": "Startup Current",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.258,
+          "min": 12.2,
+          "max": 12.284,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.096,
+          "min": 0.047,
+          "max": 0.309,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 76.0,
+          "max": 78.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.2,
+          "min": 0.575,
+          "max": 3.769,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 17,
+        "temperature_sensor_error": 50,
+        "voltage_receive_intervals_under_50ms": 8,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 8,
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_10/test_10_measurements_20261026_163131_900981.csv"
+      ]
+    },
+    "data/motor_tests/test_10/test_10_measurements_20261026_163227_383945.csv [a71c2716db1e]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 10,
+      "test_name": "Startup Current",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.26,
+          "min": 12.188,
+          "max": 12.276,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.108,
+          "min": 0.047,
+          "max": 0.344,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 77.0,
+          "max": 80.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.3479999999999999,
+          "min": 0.576,
+          "max": 4.192,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 17,
+        "temperature_sensor_error": 50,
+        "voltage_receive_intervals_under_50ms": 8,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 8,
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_10/test_10_measurements_20261026_163227_383945.csv"
+      ]
+    },
+    "data/motor_tests/test_11/test_11_measurements_20261026_163449_549898.csv [855a6055e617]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 11,
+      "test_name": "Power Consumption",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.27,
+          "min": 12.24,
+          "max": 12.284,
+          "samples": 38
+        },
+        "motor_current_A": {
+          "median": 0.0765,
+          "min": 0.046,
+          "max": 0.16,
+          "samples": 38
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 0.0,
+          "max": 79.0,
+          "samples": 38
+        },
+        "motor_power_W": {
+          "median": 0.968,
+          "min": 0.563,
+          "max": 1.965,
+          "samples": 37
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 17,
+        "temperature_sensor_error": 48,
+        "voltage_receive_intervals_under_50ms": 8,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 8,
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_11/test_11_measurements_20261026_163449_549898.csv"
+      ]
+    },
+    "data/motor_tests/motor_test_results.csv [4508a51455f1]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 1,
+      "test_name": "Safe Idle",
+      "planned_pwm_percent": 0,
+      "target_pwm_percent": [
+        0.0
+      ],
+      "metrics": {},
+      "events": {},
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "no_motor_measurements",
+        "software_idle_check_only"
+      ],
+      "source_paths": [
+        "data/motor_tests/motor_test_results.csv"
+      ]
+    },
+    "data/motor_tests/test_07/test_07_measurements_20261026_155846_925592.csv [752ef50e634e]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 7,
+      "test_name": "Minimum Starting PWM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.26,
+          "min": 0.008,
+          "max": 12.268,
+          "samples": 32
+        },
+        "motor_current_A": {
+          "median": 0.0815,
+          "min": 0.0,
+          "max": 0.143,
+          "samples": 32
+        },
+        "motor_rpm": {
+          "median": 37.0,
+          "min": 0.0,
+          "max": 38.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 0.9989999999999999,
+          "min": 0.0,
+          "max": 1.753,
+          "samples": 32
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 3,
+        "temperature_sensor_error": 34,
+        "ina219_initialization_message": 2
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 3
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_07/test_07_measurements_20261026_155846_925592.csv"
+      ]
+    },
+    "data/motor_tests/test_07/test_07_measurements_20261026_155009_175606.csv [2ff178ae12b3]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 7,
+      "test_name": "Minimum Starting PWM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        5.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.26,
+          "min": 12.248,
+          "max": 12.264,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.0665,
+          "min": 0.046,
+          "max": 0.089,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 5.0,
+          "min": 4.0,
+          "max": 5.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 0.8145,
+          "min": 0.563,
+          "max": 1.091,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 31,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_07/test_07_measurements_20261026_155009_175606.csv"
+      ]
+    },
+    "data/motor_tests/test_07/test_07_measurements_20261026_154949_982500.csv [766505071302]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 7,
+      "test_name": "Minimum Starting PWM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        5.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 0.004,
+          "min": 0.004,
+          "max": 0.004,
+          "samples": 4
+        },
+        "motor_current_A": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 4
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 4
+        },
+        "motor_power_W": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 4
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 4,
+        "temperature_sensor_error": 4
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 4
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_07/test_07_measurements_20261026_154949_982500.csv"
+      ]
+    },
+    "data/motor_tests/test_07/test_07_measurements_20261026_155554_791478.csv [84353488f6c2]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 7,
+      "test_name": "Minimum Starting PWM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        15.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.264,
+          "min": 0.004,
+          "max": 12.272,
+          "samples": 31
+        },
+        "motor_current_A": {
+          "median": 0.076,
+          "min": 0.0,
+          "max": 0.102,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": 21.0,
+          "min": 0.0,
+          "max": 22.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 0.932,
+          "min": 0.0,
+          "max": 1.25,
+          "samples": 31
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 33,
+        "ina219_initialization_message": 2,
+        "no_encoder_pulses_reported": 10
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 11
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_07/test_07_measurements_20261026_155554_791478.csv"
+      ]
+    },
+    "data/motor_tests/test_07/test_07_measurements_20261026_155205_366971.csv [c3d7eb401442]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 7,
+      "test_name": "Minimum Starting PWM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        10.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.26,
+          "min": 12.252,
+          "max": 12.268,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.077,
+          "min": 0.055,
+          "max": 0.102,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 13.0,
+          "min": 13.0,
+          "max": 14.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 0.944,
+          "min": 0.674,
+          "max": 1.251,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 31,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_07/test_07_measurements_20261026_155205_366971.csv"
+      ]
+    },
+    "data/motor_tests/test_07/test_07_measurements_20261026_155723_347601.csv [480d44c33b15]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 7,
+      "test_name": "Minimum Starting PWM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        20.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.26,
+          "min": 12.232,
+          "max": 12.264,
+          "samples": 31
+        },
+        "motor_current_A": {
+          "median": 0.085,
+          "min": 0.058,
+          "max": 0.122,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": 29.0,
+          "min": 29.0,
+          "max": 29.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.041,
+          "min": 0.709,
+          "max": 1.496,
+          "samples": 31
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 32,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_07/test_07_measurements_20261026_155723_347601.csv"
+      ]
+    },
+    "data/motor_tests/test_05/test_05_measurements_20261026_153405_821940.csv [f85e6ad6c962]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 5,
+      "test_name": "75% PWM",
+      "planned_pwm_percent": 75,
+      "target_pwm_percent": [
+        75.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.236,
+          "min": 12.148,
+          "max": 12.26,
+          "samples": 31
+        },
+        "motor_current_A": {
+          "median": 0.1,
+          "min": 0.055,
+          "max": 0.745,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": 119.0,
+          "min": 116.0,
+          "max": 119.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.223,
+          "min": 0.672,
+          "max": 9.05,
+          "samples": 31
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 32,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_05/test_05_measurements_20261026_153405_821940.csv"
+      ]
+    },
+    "data/motor_tests/test_05/test_05_measurements_20261026_153830_997529.csv [42bb66e06481]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 5,
+      "test_name": "75% PWM",
+      "planned_pwm_percent": 75,
+      "target_pwm_percent": [
+        75.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.252,
+          "min": 0.004,
+          "max": 12.264,
+          "samples": 43
+        },
+        "motor_current_A": {
+          "median": 0.07,
+          "min": 0.0,
+          "max": 0.231,
+          "samples": 43
+        },
+        "motor_rpm": {
+          "median": 119.0,
+          "min": 0.0,
+          "max": 120.0,
+          "samples": 41
+        },
+        "motor_power_W": {
+          "median": 0.855,
+          "min": 0.0,
+          "max": 2.83,
+          "samples": 43
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 14,
+        "temperature_sensor_error": 43,
+        "voltage_receive_intervals_under_50ms": 11,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 14
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_05/test_05_measurements_20261026_153830_997529.csv"
+      ]
+    },
+    "data/motor_tests/test_04/test_04_measurements_20261023_123257_281212.csv [b986a701edf5]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 4,
+      "test_name": "50% PWM",
+      "planned_pwm_percent": 50,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.172,
+          "min": 12.088,
+          "max": 12.188,
+          "samples": 31
+        },
+        "motor_current_A": {
+          "median": 0.084,
+          "min": 0.053,
+          "max": 0.397,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": -85.0,
+          "min": -87.0,
+          "max": 0.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.022,
+          "min": 0.644,
+          "max": 4.798,
+          "samples": 31
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 32,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 4
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "logged_target_pwm_differs_from_test_plan",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_04/test_04_measurements_20261023_123257_281212.csv"
+      ]
+    },
+    "data/motor_tests/test_04/test_04_measurements_20261026_152819_101120.csv [a3e9b4188b45]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 4,
+      "test_name": "50% PWM",
+      "planned_pwm_percent": 50,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 0.008,
+          "min": 0.004,
+          "max": 0.008,
+          "samples": 31
+        },
+        "motor_current_A": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 31
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 33,
+        "ina219_initialization_message": 2,
+        "no_encoder_pulses_reported": 29
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 29
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_04/test_04_measurements_20261026_152819_101120.csv"
+      ]
+    },
+    "data/motor_tests/test_04/test_04_measurements_20261026_153045_459970.csv [f1be22089a38]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 4,
+      "test_name": "50% PWM",
+      "planned_pwm_percent": 50,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.245999999999999,
+          "min": 12.176,
+          "max": 12.268,
+          "samples": 42
+        },
+        "motor_current_A": {
+          "median": 0.071,
+          "min": 0.049,
+          "max": 0.313,
+          "samples": 43
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 0.0,
+          "max": 80.0,
+          "samples": 41
+        },
+        "motor_power_W": {
+          "median": 0.869,
+          "min": 0.599,
+          "max": 3.811,
+          "samples": 43
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 43,
+        "no_encoder_pulses_reported": 12,
+        "voltage_receive_intervals_under_50ms": 11,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 11
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_04/test_04_measurements_20261026_153045_459970.csv"
+      ]
+    },
+    "data/motor_tests/test_04/test_04_measurements_20261023_123930_130514.csv [94c53038d39f]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 4,
+      "test_name": "50% PWM",
+      "planned_pwm_percent": 50,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.18,
+          "min": 12.108,
+          "max": 12.196,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.1135,
+          "min": 0.049,
+          "max": 0.321,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 76.0,
+          "max": 80.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 1.3825,
+          "min": 0.595,
+          "max": 3.886,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 31,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "logged_target_pwm_differs_from_test_plan",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_04/test_04_measurements_20261023_123930_130514.csv"
+      ]
+    },
+    "data/motor_tests/test_04/test_04_measurements_20261023_124018_212210.csv [1ec5dc1cf28d]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 4,
+      "test_name": "50% PWM",
+      "planned_pwm_percent": 50,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.188,
+          "min": 12.116,
+          "max": 12.196,
+          "samples": 43
+        },
+        "motor_current_A": {
+          "median": 0.086,
+          "min": 0.05,
+          "max": 0.32,
+          "samples": 43
+        },
+        "motor_rpm": {
+          "median": 79.0,
+          "min": 0.0,
+          "max": 95.0,
+          "samples": 41
+        },
+        "motor_power_W": {
+          "median": 1.045,
+          "min": 0.608,
+          "max": 3.877,
+          "samples": 43
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 43,
+        "voltage_receive_intervals_under_50ms": 11,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 12
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "logged_target_pwm_differs_from_test_plan",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_04/test_04_measurements_20261023_124018_212210.csv"
+      ]
+    },
+    "data/motor_tests/test_04/test_04_measurements_20261026_152904_887380.csv [b7e247dd1318]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 4,
+      "test_name": "50% PWM",
+      "planned_pwm_percent": 50,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.244,
+          "min": 0.004,
+          "max": 12.264,
+          "samples": 39
+        },
+        "motor_current_A": {
+          "median": 0.078,
+          "min": 0.0,
+          "max": 0.313,
+          "samples": 39
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 0.0,
+          "max": 79.0,
+          "samples": 37
+        },
+        "motor_power_W": {
+          "median": 0.954,
+          "min": 0.0,
+          "max": 3.814,
+          "samples": 39
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 7,
+        "temperature_sensor_error": 39,
+        "voltage_receive_intervals_under_50ms": 8,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 8
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_04/test_04_measurements_20261026_152904_887380.csv"
+      ]
+    },
+    "data/motor_tests/test_08/test_08_measurements_20261026_162054_730479.csv [64332fdc3056]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 8,
+      "test_name": "Steady-State RPM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.264,
+          "min": 12.192,
+          "max": 12.28,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.1115,
+          "min": 0.05,
+          "max": 0.319,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 76.0,
+          "max": 79.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.3679999999999999,
+          "min": 0.612,
+          "max": 3.889,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 17,
+        "temperature_sensor_error": 50,
+        "voltage_receive_intervals_under_50ms": 7,
+        "MOTOR_START": 1,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "before_start": 8,
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_08/test_08_measurements_20261026_162054_730479.csv"
+      ]
+    },
+    "data/motor_tests/test_08/test_08_measurements_20261026_160702_678912.csv [4a50734b13c5]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 8,
+      "test_name": "Steady-State RPM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.262,
+          "min": 12.204,
+          "max": 12.28,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.1015,
+          "min": 0.054,
+          "max": 0.311,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 77.0,
+          "max": 80.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.2429999999999999,
+          "min": 0.661,
+          "max": 3.795,
+          "samples": 30
+        }
+      },
+      "events": {
+        "MOTOR_START": 1,
+        "temperature_sensor_error": 42,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1,
+        "no_encoder_pulses_reported": 9
+      },
+      "zero_rpm_samples_by_phase": {
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_08/test_08_measurements_20261026_160702_678912.csv"
+      ]
+    },
+    "data/motor_tests/test_08/test_08_measurements_20261026_160934_430964.csv [639d00441e82]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 8,
+      "test_name": "Steady-State RPM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.264,
+          "min": 12.2,
+          "max": 12.284,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.115,
+          "min": 0.044,
+          "max": 0.309,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 77.0,
+          "max": 79.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.4104999999999999,
+          "min": 0.538,
+          "max": 3.769,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 17,
+        "temperature_sensor_error": 50,
+        "voltage_receive_intervals_under_50ms": 8,
+        "MOTOR_START": 1,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "before_start": 8,
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_08/test_08_measurements_20261026_160934_430964.csv"
+      ]
+    },
+    "data/motor_tests/test_08/test_08_measurements_20261026_161309_236098.csv [06ce6afbf947]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 8,
+      "test_name": "Steady-State RPM",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.268,
+          "min": 12.244,
+          "max": 12.28,
+          "samples": 33
+        },
+        "motor_current_A": {
+          "median": 0.0755,
+          "min": 0.045,
+          "max": 0.171,
+          "samples": 34
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 0.0,
+          "max": 79.0,
+          "samples": 34
+        },
+        "motor_power_W": {
+          "median": 0.98,
+          "min": 0.551,
+          "max": 2.098,
+          "samples": 33
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 21,
+        "temperature_sensor_error": 48,
+        "voltage_receive_intervals_under_50ms": 7,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 8,
+        "stopped": 13
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_08/test_08_measurements_20261026_161309_236098.csv"
+      ]
+    },
+    "data/motor_tests/test_09/test_09_measurements_20261026_162941_527228.csv [cc90c9bdac72]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 9,
+      "test_name": "Voltage Stability",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.262,
+          "min": 12.204,
+          "max": 12.284,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.097,
+          "min": 0.048,
+          "max": 0.314,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 76.0,
+          "max": 79.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.2505000000000002,
+          "min": 0.588,
+          "max": 3.832,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 17,
+        "temperature_sensor_error": 50,
+        "voltage_receive_intervals_under_50ms": 8,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 8,
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_09/test_09_measurements_20261026_162941_527228.csv"
+      ]
+    },
+    "data/motor_tests/test_09/test_09_measurements_20261026_162839_058994.csv [cf79af6af948]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 9,
+      "test_name": "Voltage Stability",
+      "planned_pwm_percent": null,
+      "target_pwm_percent": [
+        50.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.26,
+          "min": 12.212,
+          "max": 12.284,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.111,
+          "min": 0.039,
+          "max": 0.288,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": 78.0,
+          "min": 76.0,
+          "max": 79.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.3795,
+          "min": 0.477,
+          "max": 3.517,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 16,
+        "temperature_sensor_error": 49,
+        "voltage_receive_intervals_under_50ms": 7,
+        "ina219_initialization_message": 1,
+        "MOTOR_STOP": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 7,
+        "stopped": 9
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_09/test_09_measurements_20261026_162839_058994.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_120958_437558.csv [5e9d489bbbe2]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 8.568,
+          "min": 8.544,
+          "max": 8.58,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.1165,
+          "min": 0.094,
+          "max": 0.149,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 0.9969999999999999,
+          "min": 0.804,
+          "max": 1.277,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 30,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 29
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_120958_437558.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261026_152103_921780.csv [fff22d68040b]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.216,
+          "min": 12.188,
+          "max": 12.228,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.0765,
+          "min": 0.049,
+          "max": 0.125,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": -37.0,
+          "min": -37.0,
+          "max": 0.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 0.9335,
+          "min": 0.598,
+          "max": 1.527,
+          "samples": 30
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 1,
+        "temperature_sensor_error": 31,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 1
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261026_152103_921780.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_113224_350500.csv [70669fec9fc5]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 15.0,
+          "min": 15.0,
+          "max": 22.0,
+          "samples": 27
+        },
+        "motor_power_W": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 30
+        }
+      },
+      "events": {
+        "ina219_initialization_message": 3,
+        "temperature_sensor_error": 27
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_113224_350500.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_113545_699834.csv [0923f09cae05]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.32,
+          "min": 12.296,
+          "max": 12.332,
+          "samples": 41
+        },
+        "motor_current_A": {
+          "median": 0.063,
+          "min": 0.052,
+          "max": 0.125,
+          "samples": 41
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 15.0,
+          "samples": 40
+        },
+        "motor_power_W": {
+          "median": 0.776,
+          "min": 0.64,
+          "max": 1.54,
+          "samples": 41
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 40,
+        "voltage_receive_intervals_under_50ms": 10
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 30
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_113545_699834.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_113333_907869.csv [3f9dddc72df5]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.316,
+          "min": 12.304,
+          "max": 12.328,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.074,
+          "min": 0.052,
+          "max": 0.119,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 15.0,
+          "min": 15.0,
+          "max": 16.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 0.911,
+          "min": 0.64,
+          "max": 1.467,
+          "samples": 30
+        }
+      },
+      "events": {
+        "stm32_rejected_malformed_frame": 1,
+        "temperature_sensor_error": 30
+      },
+      "zero_rpm_samples_by_phase": {},
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "stm32_rejected_at_least_one_command_frame",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_113333_907869.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261026_152359_671018.csv [7f395e52587a]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.236,
+          "min": 12.208,
+          "max": 12.252,
+          "samples": 44
+        },
+        "motor_current_A": {
+          "median": 0.08,
+          "min": 0.054,
+          "max": 0.131,
+          "samples": 43
+        },
+        "motor_rpm": {
+          "median": -37.0,
+          "min": -38.0,
+          "max": 0.0,
+          "samples": 42
+        },
+        "motor_power_W": {
+          "median": 0.978,
+          "min": 0.66,
+          "max": 1.603,
+          "samples": 43
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 44,
+        "voltage_receive_intervals_under_50ms": 12,
+        "no_encoder_pulses_reported": 10,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 11
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261026_152359_671018.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_114709_673975.csv [87ede77580b9]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 11.972,
+          "min": 0.0,
+          "max": 11.996,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.0755,
+          "min": 0.0,
+          "max": 0.112,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 27
+        },
+        "motor_power_W": {
+          "median": 0.9035,
+          "min": 0.0,
+          "max": 1.342,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 30,
+        "ina219_initialization_message": 3,
+        "no_encoder_pulses_reported": 2
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 27
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_114709_673975.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_122002_953473.csv [8713c87586f3]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 7.092,
+          "min": 7.064,
+          "max": 7.096,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.1435,
+          "min": 0.122,
+          "max": 0.16,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 29
+        },
+        "motor_power_W": {
+          "median": 1.017,
+          "min": 0.864,
+          "max": 1.135,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 31,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 29
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_122002_953473.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_124742_980488.csv [e7da849a576c]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.204,
+          "min": 12.152,
+          "max": 12.212,
+          "samples": 40
+        },
+        "motor_current_A": {
+          "median": 0.079,
+          "min": 0.057,
+          "max": 0.138,
+          "samples": 40
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 39
+        },
+        "motor_power_W": {
+          "median": 0.963,
+          "min": 0.695,
+          "max": 1.685,
+          "samples": 40
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 41,
+        "voltage_receive_intervals_under_50ms": 9,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 39
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_124742_980488.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_124402_385067.csv [3b5846eed17e]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.196,
+          "min": 12.192,
+          "max": 12.204,
+          "samples": 30
+        },
+        "motor_current_A": {
+          "median": 0.066,
+          "min": 0.059,
+          "max": 0.082,
+          "samples": 30
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 28
+        },
+        "motor_power_W": {
+          "median": 0.8045,
+          "min": 0.719,
+          "max": 1.0,
+          "samples": 30
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 32,
+        "ina219_initialization_message": 2
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 28
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_124402_385067.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261026_152604_657181.csv [75fcca0f2da9]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.252,
+          "min": 12.22,
+          "max": 12.26,
+          "samples": 43
+        },
+        "motor_current_A": {
+          "median": 0.0745,
+          "min": 0.054,
+          "max": 0.12,
+          "samples": 42
+        },
+        "motor_rpm": {
+          "median": 37.0,
+          "min": 0.0,
+          "max": 37.0,
+          "samples": 41
+        },
+        "motor_power_W": {
+          "median": 0.9119999999999999,
+          "min": 0.661,
+          "max": 1.469,
+          "samples": 42
+        }
+      },
+      "events": {
+        "no_encoder_pulses_reported": 12,
+        "temperature_sensor_error": 43,
+        "voltage_receive_intervals_under_50ms": 11,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 12
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261026_152604_657181.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_124609_209303.csv [aa96b4ea51fc]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 12.2,
+          "min": 12.164,
+          "max": 12.212,
+          "samples": 31
+        },
+        "motor_current_A": {
+          "median": 0.085,
+          "min": 0.058,
+          "max": 0.137,
+          "samples": 31
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 23.0,
+          "samples": 30
+        },
+        "motor_power_W": {
+          "median": 1.036,
+          "min": 0.707,
+          "max": 1.671,
+          "samples": 31
+        }
+      },
+      "events": {
+        "stm32_rejected_malformed_frame": 1,
+        "temperature_sensor_error": 32,
+        "ina219_initialization_message": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 25
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "stm32_rejected_at_least_one_command_frame",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_124609_209303.csv"
+      ]
+    },
+    "data/motor_tests/test_03/test_03_measurements_20261023_115300_846020.csv [727e66295042]": {
+      "schema_version": 1,
+      "status": "not_assessed",
+      "test_number": 3,
+      "test_name": "25% PWM",
+      "planned_pwm_percent": 25,
+      "target_pwm_percent": [
+        25.0
+      ],
+      "metrics": {
+        "motor_voltage_V": {
+          "median": 10.924,
+          "min": 10.864,
+          "max": 11.992,
+          "samples": 36
+        },
+        "motor_current_A": {
+          "median": 0.082,
+          "min": 0.056,
+          "max": 0.119,
+          "samples": 37
+        },
+        "motor_rpm": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "samples": 37
+        },
+        "motor_power_W": {
+          "median": 0.911,
+          "min": 0.67,
+          "max": 1.318,
+          "samples": 37
+        }
+      },
+      "events": {
+        "temperature_sensor_error": 38,
+        "voltage_receive_intervals_under_50ms": 6,
+        "ina219_initialization_message": 1,
+        "no_encoder_pulses_reported": 1
+      },
+      "zero_rpm_samples_by_phase": {
+        "unmarked": 37
+      },
+      "reasons": [
+        "legacy_capture_has_no_verified_operating_context",
+        "reported_rpm_requires_encoder_calibration_verification",
+        "actual_pwm_and_direction_unverified",
+        "start_marker_missing"
+      ],
+      "source_paths": [
+        "data/motor_tests/test_03/test_03_measurements_20261023_115300_846020.csv"
+      ]
+    }
+  }
+}

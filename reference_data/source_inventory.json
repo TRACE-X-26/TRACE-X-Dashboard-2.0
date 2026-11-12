@@ -1,0 +1,16 @@
+{
+  "workbook_sheets": {
+    "START HERE": 12,
+    "TEST OVERVIEW": 16,
+    "RUN SUMMARY": 83,
+    "RAW READINGS": 18959,
+    "FILE INVENTORY": 85,
+    "DATA WARNINGS": 112
+  },
+  "sources": {
+    "Trace_X_Motor_Test_Data_Readable.xlsx": "2a58d7540fb21695a9ddf43bc4893a6e2d380f89456072a1392a2a7f1e71dc34",
+    "trace_x_motor_data.zip": "7410f50e86421a33da07e74d098cd4a18736995a858887ed7ebaa19d8db22c7e",
+    "motor_test_results.zip": "6501e6d69396c78e7d3f8fc243ac2465f93a3e0feda489dc03d6499e9073b364",
+    "motor_data_collector.py": "2972447f522b9af4d8405d76e4f50a6ade11ea8b046ee62144280f0d35fded17"
+  }
+}

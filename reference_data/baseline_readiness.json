@@ -1,0 +1,11 @@
+{
+  "approved_baselines": [],
+  "candidate_status": "PROVISIONAL_UNVERIFIED",
+  "independent_recordings": 74,
+  "reasons": [
+    "Known-good labels missing",
+    "Operating conditions incomplete",
+    "RPM calibration unverified"
+  ],
+  "model_status": "DISABLED_INSUFFICIENT_VERIFIED_LABELS"
+}
