@@ -1,0 +1,36 @@
+/* TRACE-X 2.0: touch-friendly station shell, scoped so legacy tools stay intact. */
+.trace-x2 {min-height:100vh;background:radial-gradient(circle at 80% -15%,#123645 0,transparent 38%),#071018;color:#e9eef6}
+.trace-x2-topbar {display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px clamp(16px,4vw,48px);background:#0b1b26;border-bottom:1px solid #23404d}
+.trace-x2-brand {display:flex;gap:14px;align-items:center}
+.trace-x2-mark {width:48px;height:48px;display:grid;place-items:center;border-radius:13px;font-size:28px;font-weight:800;background:#41c5e7;color:#06141b}
+.trace-x2-brand div {display:flex;flex-direction:column;gap:3px}
+.trace-x2-brand strong {font-size:22px;letter-spacing:.04em}
+.trace-x2-brand small,.trace-x2-footer {font-size:13px;color:#a0b2bf}
+.trace-x2-connection {display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:100px;border:1px solid #28434e;font-size:13px}
+.trace-x2-main {max-width:1220px;margin:0 auto;padding:clamp(16px,3vw,36px);width:100%}
+.trace-x2-main header h1 {font-size:clamp(28px,4vw,48px)}
+.trace-x2-main header p {font-size:15px;line-height:1.5;max-width:650px}
+.trace-x2-main .branch-choice {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-bottom:24px}
+.trace-x2-main .branch-card {min-height:124px;padding:26px;text-align:left;border-radius:18px;transition:border-color .15s,background .15s}
+.trace-x2-main .branch-card strong {font-size:24px}
+.trace-x2-main .branch-card span {font-size:14px;line-height:1.6}
+.trace-x2-main .panel {border-radius:18px;padding:clamp(18px,3vw,30px)}
+.trace-x2-main .panel-title h2 {font-size:24px}
+.trace-x2-main .metric-grid {grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.trace-x2-main .metric {min-height:115px}
+.trace-x2-main .metric strong {font-size:clamp(24px,3vw,38px)}
+.trace-x2-main .control-bar {display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:transparent;border:0;padding:12px 0;margin:0}
+.trace-x2-main .control-bar > button {min-height:64px;flex:1;min-width:170px;font-size:17px;font-weight:800}
+.trace-x2-main button {touch-action:manipulation}
+.trace-x2-main .motor-controls .primary {background:#43d59e;color:#061b16}
+.trace-x2-main .motor-controls .danger,.trace-x2-main .motor-controls .estop {background:#b72543;color:white}
+.trace-x2-main .motor-controls button:disabled {opacity:.45;cursor:not-allowed}
+.trace-x2-footer {border-top:1px solid #203441;margin-top:40px;padding-top:20px;line-height:1.6}
+@media(max-width:760px) {
+ .trace-x2-topbar {flex-direction:column;align-items:flex-start}
+ .trace-x2-main .branch-choice {grid-template-columns:1fr;gap:12px}
+ .trace-x2-main .branch-card {min-height:95px;padding:18px}
+ .trace-x2-main .metric-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+ .trace-x2-main .control-bar > button {min-width:100%;width:100%}
+ .trace-x2-main header {margin-bottom:18px}
+}
