@@ -137,6 +137,10 @@ int ADS_Motor_OperationReady(void)
 int ADS_Motor_OutputEnabled(void) { return ADS_BOARD_ACCEPTED; }
 const char *ADS_Motor_BlockReason(void)
 {
+  /* Report disabled build and wiring prerequisites explicitly. Reporting never changes output authorization. */
+  if (!ADS_PHYSICAL_OUTPUT_ENABLED) return "PHYSICAL_OUTPUT_DISABLED_IN_BUILD";
+  if (!ADS_MOTOR_WIRING_VERIFIED) return "MOTOR_WIRING_UNVERIFIED";
+  if (!ADS_RELAY_POWER_PATH_VERIFIED || !ADS_RELAY_POLARITY_VERIFIED) return "MOTOR_RELAY_WIRING_UNVERIFIED";
   if (!ADS_PROTECTION_LIMITS_VERIFIED) return "PROTECTION_LIMITS_UNVERIFIED";
   if (!ADS_RELAY_SAFE_OUTPUT_VERIFIED) return "RELAY_RESET_BEHAVIOR_UNVERIFIED";
   if (ADS_MOTOR_OPERATING_MODE==ADS_MODE_SUPERVISED_TEST && !ADS_SUPERVISED_TESTING_APPROVED) return "SUPERVISED_MODE_NOT_APPROVED";
