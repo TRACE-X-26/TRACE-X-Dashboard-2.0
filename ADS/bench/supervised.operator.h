@@ -17,6 +17,11 @@
 #define ADS_COMM_LOSS_STOP_VERIFIED 1
 #undef ADS_INA219_CALIBRATED
 #define ADS_INA219_CALIBRATED 1
+/* Motor electrical limits retained at the firmware's 10–14 V / 1.5 A bounds.
+ * This is an operator-supplied verification setting, not an independent
+ * measurement performed by the dashboard or GitHub integration. */
+#undef ADS_PROTECTION_LIMITS_VERIFIED
+#define ADS_PROTECTION_LIMITS_VERIFIED 1
 /* Operator confirmed D5/PB4 -> IN2, COM-LOW: LOW on / HIGH off, common cutoff.
  * Circuit power is a bounded manual supply operation, not an automatic
  * circuit diagnostic or a calibrated health assessment. */
