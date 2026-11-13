@@ -21,9 +21,8 @@ const format = (number: number | null | undefined, digits = 2) =>
 const running = (run: AutomatedRun | null) => !!run && !run.ended_at
 
 /**
- * Simple motor station: read-only readiness happens automatically.
- * The start API and STM32 independently repeat every required safety check.
- * No status result here is used to override backend permissions.
+ * Simple motor station: no automatic repeating preflight and no extra UI readiness lock.
+ * START always uses the protected backend endpoint; STM32 safety checks remain authoritative.
  */
 export default function HardwareMotorControls() {
   const [status, setStatus] = useState<HardwareStatus | null>(null)
@@ -31,7 +30,6 @@ export default function HardwareMotorControls() {
   const [error, setError] = useState('')
   const [pending, setPending] = useState(false)
   const [checking, setChecking] = useState(false)
-  const preflightBusy = useRef(false)
   const activeRef = useRef(false)
   const mounted = useRef(false)
 
@@ -57,30 +55,12 @@ export default function HardwareMotorControls() {
       }
     }
 
-    async function checkReadiness() {
-      if (preflightBusy.current || activeRef.current) return
-      preflightBusy.current = true
-      if (mounted.current) setChecking(true)
-      try {
-        // Read-only; does not ARM, switch relays, set PWM, or start a motor.
-        await api.hardwareMotorPreflight()
-        await refresh()
-      } catch (err) {
-        if (mounted.current) setError(String(err))
-      } finally {
-        preflightBusy.current = false
-        if (mounted.current) setChecking(false)
-      }
-    }
-
-    void refresh().then(() => checkReadiness())
+    // Motor status stays live; operator requests a separate read-only preflight only when desired.
+    void refresh()
     const statusTimer = window.setInterval(() => { void refresh() }, 1000)
-    // Preflight expires after 15 s; refresh periodically without user interaction.
-    const readinessTimer = window.setInterval(() => { void checkReadiness() }, 8000)
     return () => {
       mounted.current = false
       window.clearInterval(statusTimer)
-      window.clearInterval(readinessTimer)
     }
   }, [])
 
@@ -99,7 +79,9 @@ export default function HardwareMotorControls() {
   }, [runId])
 
   const active = running(run) || !!status?.active_run && running(status.active_run)
-  const ready = !!status?.hardware_control && !checking && !pending && !active
+  // Readiness is information, not a second frontend authorization gate.
+  // Actual starts are accepted/rejected by the Pi backend and STM32.
+  const canRequestStart = !!status && !pending && !active
   const pwm = status?.fixed_pwm_percent
   const maxDuration = status?.max_duration_ms ?? 30000
   const durationMs = Math.min(30000, maxDuration)
@@ -114,8 +96,23 @@ export default function HardwareMotorControls() {
           ? 'STM32 firmware reports motor output disabled.'
           : status.preflight.reason || 'Checking STM32 and sensors…'
 
+  async function checkHardware() {
+    if (checking || pending || active) return
+    setChecking(true)
+    setError('')
+    try {
+      await api.hardwareMotorPreflight()
+      const next = await api.hardwareMotorStatus()
+      setStatus(next)
+    } catch (err) {
+      setError(String(err))
+    } finally {
+      setChecking(false)
+    }
+  }
+
   async function start() {
-    if (!ready || pwm == null || pwm <= 0 || durationMs < 100) return
+    if (!canRequestStart || pwm == null || pwm <= 0 || durationMs < 100) return
     // Single explicit confirmation is the supervised operator authorization.
     if (!window.confirm(`Start the physical motor at ${pwm}% PWM for up to ${durationMs / 1000} seconds? Stay present with the physical power cutoff accessible.`)) return
     setPending(true)
@@ -159,8 +156,8 @@ export default function HardwareMotorControls() {
       <span className="mode-chip">HARDWARE</span>
     </div>
     <p role="status">
-      <strong>{active ? 'Running' : ready ? 'Ready' : checking ? 'Checking' : 'Not Ready'}</strong>
-      {!ready && !active ? ` · ${reason}` : ''}
+      <strong>{active ? 'Running' : checking ? 'Checking hardware' : status ? 'Idle' : 'Connecting'}</strong>
+      {!active && status && !status.hardware_control ? ` · ${reason}` : ''}
     </p>
     <section className="metric-grid motor-metrics" aria-label="Live motor measurements">
       <div className="metric"><span>Voltage</span><strong>{format(sample?.voltage)}<small> V</small></strong></div>
@@ -173,13 +170,14 @@ export default function HardwareMotorControls() {
       <div><span>Test Duration</span><strong>{durationMs / 1000} seconds maximum</strong></div>
     </div>
     <div className="control-bar">
-      <button className="primary" disabled={!ready || pwm == null || durationMs < 100} onClick={() => { void start() }}>START MOTOR</button>
+      <button className="primary" disabled={!canRequestStart || pwm == null || pwm <= 0 || durationMs < 100} onClick={() => { void start() }}>START MOTOR</button>
+      <button className="secondary" disabled={checking || pending || active} onClick={() => { void checkHardware() }}>CHECK HARDWARE</button>
       <button className="danger" disabled={!active} onClick={() => { void stop() }}>STOP MOTOR</button>
       <button className="estop" disabled={!active} onClick={() => { void stop(true) }}>EMERGENCY STOP</button>
     </div>
     {run && <p role="status">{run.state} · {run.stop_confirmed ? 'STM32 stop acknowledged' : 'Physical stop not independently verified'}</p>}
     {error && <p role="alert">{error}</p>}
     {run?.faults?.length ? <p role="alert">Faults: {run.faults.join(', ')}</p> : null}
-    <p className="muted">Automatic checks remain active in the Pi backend and STM32. The physical cutoff is independent of this screen. RPM may be provisional until encoder calibration is verified.</p>
+    <p className="muted">The dashboard does not repeatedly preflight or impose a second readiness gate. START may be rejected by the Pi or STM32 if the relay configuration, sensing, or output protections are invalid. CHECK HARDWARE is read-only. Keep the physical cutoff accessible; RPM remains provisional until encoder calibration.</p>
   </section>
 }
