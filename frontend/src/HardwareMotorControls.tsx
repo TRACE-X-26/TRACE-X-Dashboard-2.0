@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { api } from './api'
-import type { AutomatedRun, RecordingSummary } from './types'
+import type { AutomatedRun, Recording, RecordingSummary } from './types'
 
 type HardwareStatus = {
   operating_mode: string
@@ -41,6 +41,7 @@ export default function HardwareMotorControls() {
   const [status, setStatus] = useState<HardwareStatus | null>(null)
   const [live, setLive] = useState<LiveSensors | null>(null)
   const [recordings, setRecordings] = useState<RecordingSummary[]>([])
+  const [savedExample, setSavedExample] = useState<Recording | null>(null)
   const [run, setRun] = useState<AutomatedRun | null>(null)
   const [error, setError] = useState('')
   const [pending, setPending] = useState(false)
@@ -84,7 +85,12 @@ export default function HardwareMotorControls() {
     void refresh()
     void refreshLive()
     void api.recordings().then(items => {
-      if (mounted.current) setRecordings(items)
+      if (!mounted.current) return
+      setRecordings(items)
+      const newest = items[items.length - 1]
+      if (newest) void api.recording(newest.id).then(item => {
+        if (mounted.current) setSavedExample(item)
+      }).catch(() => {})
     }).catch(() => {})
     const liveTimer = window.setInterval(() => { void refreshLive() }, 1000)
     const statusTimer = window.setInterval(() => { void refresh() }, 1000)
@@ -244,6 +250,16 @@ export default function HardwareMotorControls() {
     <section aria-label="Previously recorded motor tests" className="panel">
       <h3>Previous motor test recordings</h3>
       <p className="muted">Saved measurements from earlier tests — not live data. Shown even if today's motor start is blocked.</p>
+      {savedExample && <div className="metric-grid" aria-label="Recorded measurement averages">
+        {(['voltage', 'current', 'rpm', 'input_power'] as const).map(key => {
+          const metric = savedExample.features[key]
+          return <div className="metric" key={key}>
+            <span>Recorded {key === 'input_power' ? 'power' : key}</span>
+            <strong>{format(metric?.mean)}<small> {({ voltage: 'V', current: 'A', rpm: 'RPM', input_power: 'W' })[key]}</small></strong>
+          </div>
+        })}
+      </div>}
+      {savedExample && <p className="muted">Historical recording: {savedExample.metadata.filename} · {savedExample.analysis_status} · averages shown above are not live measurements.</p>}
       {recordings.length === 0 ? <p>No previously imported recordings found. Historical results can be imported through the backend.</p>
         : <ul>{recordings.slice(-5).reverse().map(item =>
           <li key={item.id}>
