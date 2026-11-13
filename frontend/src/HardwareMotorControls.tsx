@@ -13,6 +13,8 @@ type HardwareStatus = {
   hardware_control_enabled: boolean
   hardware_control: boolean
   firmware_hardware_control: boolean | null
+  firmware_version?: string | null
+  firmware_hardware_block_reason?: string | null
   preflight: { ready: boolean; reason: string; stale: boolean }
 }
 
@@ -86,6 +88,7 @@ export default function HardwareMotorControls() {
   const maxDuration = status?.max_duration_ms ?? 30000
   const durationMs = Math.min(30000, maxDuration)
   const sample = active ? run?.latest_measurement : null
+  const firmwareBlock = status?.firmware_hardware_block_reason
   const reason = !status
     ? 'Connecting to the Raspberry Pi…'
     : !status.profile_ready
@@ -93,7 +96,7 @@ export default function HardwareMotorControls() {
       : !status.hardware_control_enabled
         ? 'Pi hardware control has not been enabled.'
         : status.firmware_hardware_control === false
-          ? 'STM32 firmware reports motor output disabled.'
+          ? `STM32 motor output disabled: ${firmwareBlock || status.preflight.reason || 'no block reason reported'}`
           : status.preflight.reason || 'Checking STM32 and sensors…'
 
   async function checkHardware() {
@@ -101,12 +104,16 @@ export default function HardwareMotorControls() {
     setChecking(true)
     setError('')
     try {
-      await api.hardwareMotorPreflight()
-      const next = await api.hardwareMotorStatus()
-      setStatus(next)
+      const result = await api.hardwareMotorPreflight()
+      setError(result.ready ? '' : result.reason || 'Hardware check did not pass')
     } catch (err) {
       setError(String(err))
     } finally {
+      try {
+        setStatus(await api.hardwareMotorStatus())
+      } catch (err) {
+        setError(`Unable to refresh hardware status: ${String(err)}`)
+      }
       setChecking(false)
     }
   }
@@ -159,6 +166,7 @@ export default function HardwareMotorControls() {
       <strong>{active ? 'Running' : checking ? 'Checking hardware' : status ? 'Idle' : 'Connecting'}</strong>
       {!active && status && !status.hardware_control ? ` · ${reason}` : ''}
     </p>
+    {status && <p className="muted" role="status">STM32 firmware: {status.firmware_version || 'Not yet identified — use CHECK HARDWARE'} · {status.firmware_hardware_control === true ? 'Motor output configured' : status.firmware_hardware_control === false ? `Output blocked: ${firmwareBlock || 'reason unavailable'}` : 'Firmware output state not yet checked'}</p>}
     <section className="metric-grid motor-metrics" aria-label="Live motor measurements">
       <div className="metric"><span>Voltage</span><strong>{format(sample?.voltage)}<small> V</small></strong></div>
       <div className="metric"><span>Current</span><strong>{format(sample?.current)}<small> A</small></strong></div>
