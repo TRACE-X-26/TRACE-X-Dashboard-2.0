@@ -25,7 +25,8 @@ type LiveSensors = {
   source?: string
   ina219?: Record<string, { calibrated?: boolean; valid?: boolean; stale?: boolean; measurements?: Record<string, LiveValue> }>
   rpm?: number | { value?: number | null; valid?: boolean }
-  motor_sample?: { rpm?: number | null; voltage?: number | null; current?: number | null; power?: number | null }
+  motor_sample?: { motor_rpm?: number | null; rpm?: number | null; voltage?: number | null; current?: number | null; power?: number | null; stale?: boolean }
+  channels?: Record<string, { value?: number | null; quality?: string }>
 }
 const numeric = (value: number | null | undefined): number | null =>
   typeof value === 'number' && Number.isFinite(value) ? value : null
@@ -135,14 +136,19 @@ export default function HardwareMotorControls() {
   const rpmReading = live?.rpm
   const sensorRpm = sensorsLive
     ? (typeof rpmReading === 'number' ? numeric(rpmReading)
-      : rpmReading?.valid === true ? numeric(rpmReading.value) : numeric(live?.motor_sample?.rpm))
+      : rpmReading?.valid === true ? numeric(rpmReading.value)
+      : live?.motor_sample?.stale === false ? numeric(live.motor_sample.motor_rpm ?? live.motor_sample.rpm)
+      : live?.channels?.rpm?.quality !== 'STALE' ? numeric(live?.channels?.rpm?.value) : null)
     : null
   const sample = active ? latestRun?.latest_measurement : null
   const value = (key: 'voltage' | 'current' | 'rpm' | 'input_power') => {
     const activeValue = numeric(sample?.[key])
     if (activeValue !== null) return activeValue
     if (key === 'rpm') return sensorRpm
-    return electrical(key === 'input_power' ? 'power' : key)
+    const electricalValue = electrical(key === 'input_power' ? 'power' : key)
+    if (electricalValue !== null) return electricalValue
+    const sampleKey = key === 'input_power' ? 'power' : key
+    return sensorsLive && live?.motor_sample?.stale === false ? numeric(live.motor_sample[sampleKey]) : null
   }
   const firmwareBlock = status?.firmware_hardware_block_reason
   const reason = !status
