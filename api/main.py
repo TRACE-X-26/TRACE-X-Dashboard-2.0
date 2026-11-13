@@ -671,6 +671,8 @@ def hardware_motor_status():
                 hardware_control_enabled=engine.hardware_runtime.enabled,
                 hardware_control=ready and preflight['ready'],
                 firmware_hardware_control=preflight.get('firmware_hardware_control'),
+                firmware_version=(preflight.get('capabilities') or {}).get('firmware_version'),
+                firmware_hardware_block_reason=(preflight.get('capabilities') or {}).get('hardware_block_reason'),
                 preflight=preflight,
                 operating_mode=profile.get('operating_mode','NORMAL'),
                 power_feedback_installed=profile.get('power_feedback_installed',False),
