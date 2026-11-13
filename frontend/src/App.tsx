@@ -41,7 +41,7 @@ export default function App() {
       <TestStation />
       <footer className="trace-x2-footer">
         Physical outputs remain controlled by the STM32 and the Raspberry Pi backend.
-        Motor start requires approved firmware, operator confirmation and automatic hardware readiness.
+        Motor start requests use the protected backend and STM32. CHECK HARDWARE reports the exact firmware or wiring issue when unavailable.
       </footer>
     </main>
   </div>
